@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+const jsonImporter = require('node-sass-json-importer')
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -18,7 +19,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    '~/assets/main.scss',
+  ],
+
+  styleResources: {
+    scss: ['~/assets/main.scss']
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -64,5 +71,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    sassOptions: {
+      importer: jsonImporter()
+    }
+  },
 }

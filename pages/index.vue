@@ -75,6 +75,11 @@
           <v-spacer />
           <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
         </v-card-actions>
+        <div class="test-color text-center">
+          <h1>
+            TEST COLOR
+          </h1>
+        </div>
       </v-card>
     </v-col>
   </v-row>
@@ -85,3 +90,7 @@ export default {
   name: 'IndexPage',
 }
 </script>
+
+<style lang="scss">
+
+</style>
